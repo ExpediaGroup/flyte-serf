@@ -1,4 +1,4 @@
-# flyte-serf
+# flyte-serf ![Build Status](https://travis-ci.org/HotelsDotCom/flyte-serf.svg?branch=master)
 
 A Serf plugin for flyte. This plugin joins existing Serf cluster and propagates Serf events to FLYTE API.
 
