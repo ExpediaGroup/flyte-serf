@@ -1,8 +1,12 @@
-# flyte-serf ![Build Status](https://travis-ci.org/HotelsDotCom/flyte-serf.svg?branch=master)
+# flyte-serf 
 
-A Serf plugin for flyte. This plugin joins existing Serf cluster and propagates Serf events to FLYTE API.
+![Build Status](https://travis-ci.org/HotelsDotCom/flyte-serf.svg?branch=master)
+[![Docker Stars](https://img.shields.io/docker/stars/hotelsdotcom/flyte-serf.svg)](https://hub.docker.com/r/hotelsdotcom/flyte-serf)
+[![Docker Pulls](https://img.shields.io/docker/pulls/hotelsdotcom/flyte-serf.svg)](https://hub.docker.com/r/hotelsdotcom/flyte-serf)
 
-This plugin register pack named `Serf`. It provides two triggers `UserEvent`, `MemberEvent` and one command `SendEvent`
+A Serf pack for Flyte which will join an existing Serf cluster and allow you to raise and respond to events from your Flyte flows.
+
+It provides two triggers `UserEvent`, `MemberEvent` and one command `SendEvent`.
 
 ## ENV Configuration
 
