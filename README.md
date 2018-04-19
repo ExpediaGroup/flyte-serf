@@ -4,9 +4,9 @@
 [![Docker Stars](https://img.shields.io/docker/stars/hotelsdotcom/flyte-serf.svg)](https://hub.docker.com/r/hotelsdotcom/flyte-serf)
 [![Docker Pulls](https://img.shields.io/docker/pulls/hotelsdotcom/flyte-serf.svg)](https://hub.docker.com/r/hotelsdotcom/flyte-serf)
 
-A Serf pack for Flyte. This joins an existing Serf cluster and allows you to raise and respond to events from your Flyte flows.
+A Serf pack for Flyte which will join an existing Serf cluster and allow you to raise and respond to events from your Flyte flows.
 
-This plugin register pack named `Serf`. It provides two triggers `UserEvent`, `MemberEvent` and one command `SendEvent`
+It provides two triggers `UserEvent`, `MemberEvent` and one command `SendEvent`
 
 ## ENV Configuration
 
