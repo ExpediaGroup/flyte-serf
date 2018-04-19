@@ -6,7 +6,7 @@
 
 A Serf pack for Flyte which will join an existing Serf cluster and allow you to raise and respond to events from your Flyte flows.
 
-It provides two triggers `UserEvent`, `MemberEvent` and one command `SendEvent`
+It provides two triggers `UserEvent`, `MemberEvent` and one command `SendEvent`.
 
 ## ENV Configuration
 
