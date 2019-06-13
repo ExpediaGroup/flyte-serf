@@ -106,7 +106,8 @@ func (a *Agent) Join(addrs []string, ignoreOld bool) {
 		log.Printf("[INFO] Serf joined %d nodes", n)
 	}
 	if err != nil {
-		log.Printf("[WARN] Serf couldn't join cluster: %s", err)
+		//Exit in case cluster join fails
+		log.Fatalf("[ERROR] Serf couldn't join cluster: %s", err)
 	}
 }
 
