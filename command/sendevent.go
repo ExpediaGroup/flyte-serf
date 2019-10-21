@@ -19,10 +19,10 @@ package command
 import (
 	"encoding/json"
 	"errors"
-	"log"
 	"github.com/HotelsDotCom/flyte-client/flyte"
 	"github.com/HotelsDotCom/flyte-serf/agent"
 	"github.com/HotelsDotCom/flyte-serf/event"
+	"log"
 )
 
 func SendEventCommand(serfAgent *agent.Agent) flyte.Command {

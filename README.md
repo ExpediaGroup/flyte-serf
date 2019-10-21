@@ -76,7 +76,6 @@ This command can output two event types: `EventSent` and `SendEventFailed`
 
 To build and run from the command line:
 * Clone this repo
-* Run `dep ensure` (must have [dep](https://github.com/golang/dep) installed )
 * Run `go build`
 * FLYTE_API="FLYTE_API_URL" ./flyte-serf
     

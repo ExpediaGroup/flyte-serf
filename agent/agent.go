@@ -17,13 +17,13 @@ limitations under the License.
 package agent
 
 import (
-	"log"
-	"github.com/hashicorp/serf/serf"
+	"fmt"
 	"github.com/hashicorp/serf/cmd/serf/command/agent"
+	"github.com/hashicorp/serf/serf"
+	"log"
+	"net"
 	"sync"
 	"time"
-	"net"
-	"fmt"
 )
 
 const (
@@ -35,30 +35,30 @@ const (
 // on top of Serf such as invoking EventHandlers when events occur.
 type Agent struct {
 	// Stores serf configuration
-	config        *serf.Config
+	config *serf.Config
 
 	// This is the underlying Serf we are wrapping
-	serf          *serf.Serf
+	serf *serf.Serf
 
 	// eventCh is used for Serf to deliver events on
-	eventCh       chan serf.Event
+	eventCh chan serf.Event
 
 	// eventHandlers is the registered handlers for events
 	eventHandlers []HandleEvent
 
 	// shutdownCh is used for shutdowns
-	shutdown      bool
-	shutdownCh    chan struct{}
-	shutdownLock  sync.Mutex
+	shutdown     bool
+	shutdownCh   chan struct{}
+	shutdownLock sync.Mutex
 }
 
 type HandleEvent func(e serf.Event)
 
 func StartAgent(conf *serf.Config, joinHosts []string, eventHandlers []HandleEvent) (*Agent, error) {
 	a := &Agent{
-		config: conf,
-		eventCh: make(chan serf.Event, 64),
-		shutdownCh: make(chan struct{}),
+		config:        conf,
+		eventCh:       make(chan serf.Event, 64),
+		shutdownCh:    make(chan struct{}),
 		eventHandlers: eventHandlers,
 	}
 	a.config.EventCh = a.eventCh

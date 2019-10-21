@@ -17,8 +17,8 @@ limitations under the License.
 package agent
 
 import (
-	"github.com/hashicorp/serf/serf"
 	"encoding/json"
+	"github.com/hashicorp/serf/serf"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -30,7 +30,6 @@ func TestStartAgent(t *testing.T) {
 	serfConfig := serf.DefaultConfig()
 	serfConfig.NodeName = "test-agent"
 	serfConfig.MemberlistConfig.BindPort = 7951
-
 
 	a, err := StartAgent(serfConfig, nil, nil)
 	if err != nil {
