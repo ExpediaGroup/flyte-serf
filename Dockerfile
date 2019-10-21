@@ -11,6 +11,7 @@ RUN go build
 
 # Run image
 FROM alpine:latest
+RUN apk add --no-cache ca-certificates
 COPY --from=build-env /app/flyte-serf .
 
 ENTRYPOINT ["./flyte-serf"]
