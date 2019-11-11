@@ -17,15 +17,15 @@ limitations under the License.
 package main
 
 import (
-	"log"
-	"net/url"
-	"os"
-	"os/signal"
 	api "github.com/HotelsDotCom/flyte-client/client"
 	"github.com/HotelsDotCom/flyte-client/flyte"
 	"github.com/HotelsDotCom/flyte-serf/agent"
 	"github.com/HotelsDotCom/flyte-serf/command"
 	"github.com/HotelsDotCom/flyte-serf/event"
+	"log"
+	"net/url"
+	"os"
+	"os/signal"
 	"syscall"
 	"time"
 )

@@ -17,10 +17,10 @@ limitations under the License.
 package event
 
 import (
+	"github.com/HotelsDotCom/flyte-client/flyte"
 	"github.com/hashicorp/serf/serf"
 	"log"
 	"net"
-	"github.com/HotelsDotCom/flyte-client/flyte"
 )
 
 type MemberEventHandler struct {

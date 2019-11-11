@@ -17,10 +17,10 @@ limitations under the License.
 package main
 
 import (
+	"github.com/HotelsDotCom/flyte-serf/agent"
 	"github.com/hashicorp/serf/serf"
 	"log"
 	"os"
-	"github.com/HotelsDotCom/flyte-serf/agent"
 	"strconv"
 	"strings"
 )

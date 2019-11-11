@@ -18,9 +18,9 @@ package command
 
 import (
 	"encoding/json"
-	"github.com/hashicorp/serf/serf"
 	"github.com/HotelsDotCom/flyte-serf/agent"
 	"github.com/HotelsDotCom/flyte-serf/event"
+	"github.com/hashicorp/serf/serf"
 	"testing"
 	"time"
 )
