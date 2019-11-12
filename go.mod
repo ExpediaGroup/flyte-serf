@@ -3,7 +3,7 @@ module github.com/HotelsDotCom/flyte-serf
 go 1.12
 
 require (
-	github.com/HotelsDotCom/flyte-client v0.0.0-20180416133849-e6fac3e89d97
+	github.com/HotelsDotCom/flyte-client v0.0.0-20191018093418-d4ecefe9ad35
 	github.com/HotelsDotCom/go-logger v0.0.0-20180416124740-80a244c898b0
 	github.com/armon/circbuf v0.0.0-20150827004946-bbbad097214e
 	github.com/armon/go-metrics v0.0.0-20180221182744-783273d70314
