@@ -1,4 +1,4 @@
-# flyte-serf 
+# flyte-serf
 
 ![Build Status](https://travis-ci.org/HotelsDotCom/flyte-serf.svg?branch=master)
 [![Docker Stars](https://img.shields.io/docker/stars/hotelsdotcom/flyte-serf.svg)](https://hub.docker.com/r/hotelsdotcom/flyte-serf)
@@ -17,14 +17,15 @@ It provides two triggers `UserEvent`, `MemberEvent` and one command `SendEvent`.
 | SERF_JOIN_HOSTS   |                              | Address of another agent to join upon starting up. This can be comma delimited to specify multiple agents to join. |
 | SERF_KEYRING_FILE |                              | Specifies a file to load keyring data from. |
 | FLYTE_API         |                              | The FLYTE API endpoint to use. |
+| PACK_NAME         | Serf                         | Specifies pack name to register with. |
 
 ## Events
 
 ### UserEvent
-This event is invoked when Serf agent receives user event. Event output is a map of strings 
+This event is invoked when Serf agent receives user event. Event output is a map of strings
 ```
 {
-    "name": "...user event name...", 
+    "name": "...user event name...",
     "payload": "...user event payload..."
 }
 ```
@@ -44,8 +45,8 @@ Event output is a map of strings
 This event is emitted on the successful invocation of the `SendEvent` command. It's payload is:
 ```
 {
-    "name": "...user event name...", 
-    "payload": "...user event payload...", 
+    "name": "...user event name...",
+    "payload": "...user event payload...",
     "coalesce": "...coalesce flag..."
 }
 ```
@@ -56,11 +57,11 @@ This event is emitted on the unsuccessful invocation of the `SendEvent` command.
 ## Commands
 
 ### SendEvent
-This command sends user event to a serf cluster. Command's input is 
+This command sends user event to a serf cluster. Command's input is
 ```
 {
-    "name": "...user event name...", 
-    "payload": "...user event payload...", 
+    "name": "...user event name...",
+    "payload": "...user event payload...",
     "coalesce": "...coalesce flag..."
 }
 ```
@@ -78,7 +79,7 @@ To build and run from the command line:
 * Clone this repo
 * Run `go build`
 * FLYTE_API="FLYTE_API_URL" ./flyte-serf
-    
+
 ### Docker
 
     docker build -t flyte-serf:latest .
