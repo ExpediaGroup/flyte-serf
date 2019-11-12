@@ -30,7 +30,7 @@ import (
 	"time"
 )
 
-const packName = "Serf"
+const defaultPackName = "Serf"
 
 func main() {
 	handler := &event.UserEventHandler{}
@@ -43,7 +43,7 @@ func main() {
 	defer a.Shutdown()
 
 	packDef := flyte.PackDef{
-		Name:    packName,
+		Name:    getPackName(),
 		HelpURL: parseURL("https://github.com/HotelsDotCom/flyte-serf/blob/master/README.md"),
 		Commands: []flyte.Command{
 			command.SendEventCommand(a),
@@ -66,6 +66,18 @@ func main() {
 	case <-a.ShutdownCh():
 	}
 	a.Leave()
+}
+
+func getPackName() string {
+	var pack = os.Getenv("PACK_NAME")
+
+	if pack == "" {
+		log.Printf("[INFO] PACK_NAME environment variable is not set use %s as pack name.", defaultPackName)
+		return defaultPackName
+	}
+
+	log.Printf("[INFO] Use %s as pack name.", pack)
+	return pack
 }
 
 func getHost() *url.URL {
