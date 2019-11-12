@@ -69,11 +69,11 @@ func main() {
 }
 
 func getPackName() string {
-	var pack = defaultPackName
+	var pack = os.Getenv("PACK_NAME")
 
-	if os.Getenv("PACK_NAME") != "" {
-		pack = os.Getenv("PACK_NAME")
-		log.Printf("[INFO] PACK_NAME environment variable is set to %s.", pack)
+	if pack == "" {
+		log.Printf("[INFO] PACK_NAME environment variable is not set use %s as pack name.", defaultPackName)
+		return defaultPackName
 	}
 
 	log.Printf("[INFO] Use %s as pack name.", pack)
