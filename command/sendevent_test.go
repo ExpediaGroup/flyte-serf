@@ -18,8 +18,8 @@ package command
 
 import (
 	"encoding/json"
-	"github.com/HotelsDotCom/flyte-serf/agent"
-	"github.com/HotelsDotCom/flyte-serf/event"
+	"github.com/ExpediaGroup/flyte-serf/agent"
+	"github.com/ExpediaGroup/flyte-serf/event"
 	"github.com/hashicorp/serf/serf"
 	"testing"
 	"time"

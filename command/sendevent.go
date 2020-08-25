@@ -19,9 +19,9 @@ package command
 import (
 	"encoding/json"
 	"errors"
+	"github.com/ExpediaGroup/flyte-serf/agent"
+	"github.com/ExpediaGroup/flyte-serf/event"
 	"github.com/HotelsDotCom/flyte-client/flyte"
-	"github.com/HotelsDotCom/flyte-serf/agent"
-	"github.com/HotelsDotCom/flyte-serf/event"
 	"log"
 )
 

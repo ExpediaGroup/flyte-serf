@@ -1,6 +1,6 @@
 # flyte-serf
 
-![Build Status](https://travis-ci.org/HotelsDotCom/flyte-serf.svg?branch=master)
+![Build Status](https://travis-ci.org/ExpediaGroup/flyte-serf.svg?branch=master)
 [![Docker Stars](https://img.shields.io/docker/stars/hotelsdotcom/flyte-serf.svg)](https://hub.docker.com/r/hotelsdotcom/flyte-serf)
 [![Docker Pulls](https://img.shields.io/docker/pulls/hotelsdotcom/flyte-serf.svg)](https://hub.docker.com/r/hotelsdotcom/flyte-serf)
 

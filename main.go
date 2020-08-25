@@ -17,11 +17,11 @@ limitations under the License.
 package main
 
 import (
+	"github.com/ExpediaGroup/flyte-serf/agent"
+	"github.com/ExpediaGroup/flyte-serf/command"
+	"github.com/ExpediaGroup/flyte-serf/event"
 	api "github.com/HotelsDotCom/flyte-client/client"
 	"github.com/HotelsDotCom/flyte-client/flyte"
-	"github.com/HotelsDotCom/flyte-serf/agent"
-	"github.com/HotelsDotCom/flyte-serf/command"
-	"github.com/HotelsDotCom/flyte-serf/event"
 	"log"
 	"net/url"
 	"os"
@@ -44,7 +44,7 @@ func main() {
 
 	packDef := flyte.PackDef{
 		Name:    getPackName(),
-		HelpURL: parseURL("https://github.com/HotelsDotCom/flyte-serf/blob/master/README.md"),
+		HelpURL: parseURL("https://github.com/ExpediaGroup/flyte-serf/blob/master/README.md"),
 		Commands: []flyte.Command{
 			command.SendEventCommand(a),
 		},
